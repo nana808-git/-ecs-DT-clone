@@ -1,0 +1,15 @@
+{
+    "Id": "Policy1509573454872",
+    "Version": "2012-10-17",
+    "Statement": [
+      {
+        "Sid": "Stmt1509573447773",
+        "Action": "s3:PutObject",
+        "Effect": "Allow",
+        "Resource": "arn:aws:s3:::${bucket}/${prefix}/AWSLogs/${account_id}/*",
+        "Principal": {
+          "AWS": ["${region_account_id}"]
+        }
+      }
+    ]
+  }

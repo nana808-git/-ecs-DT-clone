@@ -1,0 +1,15 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+      {
+        "Action": [
+          "s3:Get*"
+        ],
+        "Effect": "Allow",
+        "Resource": [
+          "arn:aws:s3:::${bucket_name}/${name}/${env}/ansible/ansible-playbook-${role}.tar.gz",
+          "arn:aws:s3:::${bucket_name}/${name}/${env}/ansible/version"
+        ]
+      }
+    ]
+  }
